@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
 import { useInView } from './hooks/useInView';
-import { Clock, CheckCircle2, DollarSign } from 'lucide-react';
+import { Clock, CheckCircle2, Euro } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function LeasingSection() {
@@ -17,7 +17,7 @@ export function LeasingSection() {
       text: 'Professionelle Ergebnisse die beim Gutachten bestehen'
     },
     {
-      icon: <DollarSign className="w-6 h-6" />,
+      icon: <Euro className="w-6 h-6" />,
       text: 'Faire Preise – deutlich günstiger als Händler-Nachberechnungen'
     }
   ];
