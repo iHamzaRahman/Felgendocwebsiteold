@@ -18,10 +18,10 @@ export function GalleryFilter({ categories, activeCategory, onCategoryChange }: 
             onClick={() => onCategoryChange(category)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className={`px-6 py-3 rounded-lg font-semibold text-sm transition-all ${
+            className={`rounded-full font-semibold text-sm transition-all ${
               isActive
                 ? 'text-[#0A0A0A] shadow-gold'
-                : 'bg-[#1A1A1A] text-[#A8AFBA] border-2 hover:border-[#C9A84C]/40'
+                : 'relative p-[2px] overflow-hidden bg-[#1A1A1A] text-[#A8AFBA] hover:border-[#C9A84C]/40'
             }`}
             style={
               isActive
@@ -29,11 +29,17 @@ export function GalleryFilter({ categories, activeCategory, onCategoryChange }: 
                     background: 'linear-gradient(135deg, #8B6914 0%, #C9A84C 50%, #E8C068 100%)',
                   }
                 : {
-                    borderImage: 'linear-gradient(135deg, rgba(139, 105, 20, 0.2), rgba(201, 168, 76, 0.2)) 1'
+                    background: 'linear-gradient(135deg, rgba(139, 105, 20, 0.2), rgba(201, 168, 76, 0.2))'
                   }
             }
           >
-            {category}
+            {isActive ? (
+              <span className="px-6 py-3 block">{category}</span>
+            ) : (
+              <div className="px-6 py-3 bg-[#0A0A0A] rounded-full w-full">
+                {category}
+              </div>
+            )}
           </motion.button>
         );
       })}

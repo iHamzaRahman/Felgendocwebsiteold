@@ -107,12 +107,14 @@ export function Testimonials() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.2 }}
-            className="inline-block px-4 py-2 bg-[#C9A84C]/10 border-2 rounded-full mb-4"
-            style={{ borderImage: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068) 1' }}
+            className="inline-block relative p-[2px] rounded-full overflow-hidden mb-4"
+            style={{ background: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068)' }}
           >
-            <span className="text-sm font-semibold tracking-wide uppercase text-gradient-gold">
-              Bewertungen
-            </span>
+            <div className="px-4 py-2 bg-[#0A0A0A] rounded-full">
+              <span className="text-sm font-semibold tracking-wide uppercase text-gradient-gold">
+                Bewertungen
+              </span>
+            </div>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-[#F5F5F5] mb-4">
@@ -150,7 +152,7 @@ export function Testimonials() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-[#C9A84C] text-[#C9A84C] rounded-lg font-bold text-lg hover:bg-[#C9A84C] hover:text-[#0A0A0A] transition-all"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-[#C9A84C] text-[#C9A84C] rounded-full font-bold text-lg hover:bg-[#C9A84C] hover:text-[#0A0A0A] transition-all"
           >
             <svg viewBox="0 0 24 24" className="w-6 h-6">
               <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>

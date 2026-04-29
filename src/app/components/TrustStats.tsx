@@ -81,7 +81,7 @@ function StatCard({ number, label, delay }: StatCardProps) {
 
 export function TrustStats() {
   const stats = [
-    { number: '500+', label: 'Reparierte Felgen' },
+    { number: '271+', label: 'Reparierte Felgen' },
     { number: '100%', label: 'Kundenzufriedenheit' },
     { number: 'Göttingen', label: '& Umgebung' }
   ];

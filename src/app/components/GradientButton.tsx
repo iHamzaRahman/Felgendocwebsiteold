@@ -21,7 +21,7 @@ export function GradientButton({
   className = '',
   onClick
 }: GradientButtonProps) {
-  const baseStyles = "px-8 py-4 rounded-lg font-bold text-base sm:text-lg transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap";
+  const baseStyles = "px-8 py-4 rounded-full font-bold text-base sm:text-lg transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap";
 
   // Internal link using React Router
   if (to) {
@@ -42,15 +42,14 @@ export function GradientButton({
     }
 
     return (
-      <Link to={to}>
+      <Link to={to} className={className}>
         <motion.div
           onClick={onClick}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className={`${baseStyles} bg-transparent border-2 ${className}`}
-          style={{ borderImage: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068) 1' }}
+          className="px-8 py-4 rounded-full font-bold text-base sm:text-lg transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap border-2 border-[#C9A84C] text-gradient-gold bg-transparent"
         >
-          <span className="text-gradient-gold">{children}</span>
+          {children}
         </motion.div>
       </Link>
     );
@@ -82,10 +81,9 @@ export function GradientButton({
       onClick={onClick}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className={`${baseStyles} bg-transparent border-2 ${className}`}
-      style={{ borderImage: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068) 1' }}
+      className={`px-8 py-4 rounded-full font-bold text-base sm:text-lg transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap border-2 border-[#C9A84C] text-gradient-gold bg-transparent ${className}`}
     >
-      <span className="text-gradient-gold">{children}</span>
+      {children}
     </motion.a>
   );
 }

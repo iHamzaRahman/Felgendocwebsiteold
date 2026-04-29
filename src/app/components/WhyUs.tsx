@@ -108,12 +108,14 @@ export function WhyUs() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.2 }}
-            className="inline-block px-4 py-2 bg-[#C9A84C]/10 border-2 rounded-full mb-4"
-            style={{ borderImage: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068) 1' }}
+            className="inline-block relative p-[2px] rounded-full overflow-hidden mb-4"
+            style={{ background: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068)' }}
           >
-            <span className="text-sm font-semibold tracking-wide uppercase text-gradient-gold">
-              Warum wir
-            </span>
+            <div className="px-4 py-2 bg-[#0A0A0A] rounded-full">
+              <span className="text-sm font-semibold tracking-wide uppercase text-gradient-gold">
+                Warum wir
+              </span>
+            </div>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-[#F5F5F5] mb-4">

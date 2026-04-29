@@ -14,9 +14,9 @@ export function Hero() {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <ImageWithFallback
-          src="https://images.unsplash.com/photo-1767274353823-c6266f765e29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw5fHx3aGVlbCUyMHJlcGFpciUyMHByZW1pdW0lMjBhdXRvbW90aXZlfGVufDF8fHx8MTc3NjgxMDcyMXww&ixlib=rb-4.1.0&q=80&w=1080"
-          alt="Premium Felgenreparatur"
+        <img
+          src="/src/imports/FelgenDoc_Hero_Section.png"
+          alt="FelgenDoc Göttingen Hero"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/90 to-transparent" />
@@ -39,12 +39,14 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="inline-block px-4 py-2 bg-[#C9A84C]/10 border-2 rounded-full"
-                style={{ borderImage: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068) 1' }}
+                className="inline-block relative p-[2px] rounded-full overflow-hidden"
+                style={{ background: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068)' }}
               >
-                <span className="text-sm font-semibold tracking-wide uppercase text-gradient-gold">
-                  Premium Felgenspezialist
-                </span>
+                <div className="px-4 py-2 bg-[#0A0A0A] rounded-full">
+                  <span className="text-sm font-semibold tracking-wide uppercase text-gradient-gold">
+                    Premium Felgenspezialist
+                  </span>
+                </div>
               </motion.div>
 
               <motion.h1
@@ -87,7 +89,7 @@ export function Hero() {
                 <motion.div
                   whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(201, 168, 76, 0.4)' }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 text-[#0A0A0A] rounded-lg font-bold text-base sm:text-lg transition-all shadow-gold inline-flex items-center justify-center gap-2 whitespace-nowrap w-full"
+                  className="px-8 py-4 text-[#0A0A0A] rounded-full font-bold text-base sm:text-lg transition-all shadow-gold inline-flex items-center justify-center gap-2 whitespace-nowrap w-full"
                   style={{ background: 'linear-gradient(135deg, #8B6914 0%, #C9A84C 50%, #E8C068 100%)' }}
                 >
                   <Phone className="w-5 h-5" />
@@ -101,11 +103,13 @@ export function Hero() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-transparent border-2 rounded-lg font-bold text-base sm:text-lg transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap w-full"
-                style={{ borderImage: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068) 1' }}
+                className="relative p-[2px] rounded-full w-full overflow-hidden"
+                style={{ background: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068)' }}
               >
-                <MessageCircle className="w-5 h-5" />
-                <span className="text-gradient-gold">WhatsApp schreiben</span>
+                <div className="px-8 py-4 bg-[#0A0A0A] rounded-full font-bold text-base sm:text-lg transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap w-full">
+                  <MessageCircle className="w-5 h-5 text-[#C9A84C]" />
+                  <span className="text-gradient-gold">WhatsApp schreiben</span>
+                </div>
               </motion.a>
             </motion.div>
 
@@ -138,24 +142,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="hidden lg:block"
           >
-            <div className="relative">
-              <motion.div
-                animate={{
-                  rotate: [0, 360],
-                }}
-                transition={{
-                  duration: 20,
-                  repeat: Infinity,
-                  ease: 'linear',
-                }}
-                className="absolute inset-0 bg-gradient-to-r from-[#C9A84C]/20 to-transparent rounded-full blur-3xl"
-              />
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1768577615397-f9916e9b2152?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHx3aGVlbCUyMHJlcGFpciUyMHByZW1pdW0lMjBhdXRvbW90aXZlfGVufDF8fHx8MTc3NjgxMDcyMXww&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Premium Wheel"
-                className="relative rounded-2xl shadow-2xl shadow-[#C9A84C]/20"
-              />
-            </div>
+            
           </motion.div>
         </div>
       </div>

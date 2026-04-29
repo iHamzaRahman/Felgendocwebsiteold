@@ -42,8 +42,8 @@ export function Contact() {
     {
       icon: <MapPin className="w-6 h-6" />,
       label: 'Adresse',
-      value: 'Rudolf-Winkel-Straße 11, 37081 Göttingen',
-      link: 'https://maps.google.com/?q=Rudolf-Winkel-Straße+11,+37081+Göttingen'
+      value: 'Rudolf-Winkel-Straße 11, 37079 Göttingen, Germany',
+      link: 'https://maps.google.com/?q=Rudolf-Winkel-Straße+11,+37079+Göttingen,+Germany'
     },
     {
       icon: <Clock className="w-6 h-6" />,
@@ -68,12 +68,14 @@ export function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.2 }}
-            className="inline-block px-4 py-2 bg-[#C9A84C]/10 border-2 rounded-full mb-4"
-            style={{ borderImage: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068) 1' }}
+            className="inline-block relative p-[2px] rounded-full overflow-hidden mb-4"
+            style={{ background: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068)' }}
           >
-            <span className="text-sm font-semibold tracking-wide uppercase text-gradient-gold">
-              Kontakt
-            </span>
+            <div className="px-4 py-2 bg-[#111111] rounded-full">
+              <span className="text-sm font-semibold tracking-wide uppercase text-gradient-gold">
+                Kontakt
+              </span>
+            </div>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-[#F5F5F5] mb-4">
@@ -136,7 +138,7 @@ export function Contact() {
                 href="tel:+4917670363162"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full px-6 py-3 text-[#0A0A0A] rounded-lg font-bold text-center transition-all shadow-gold whitespace-nowrap"
+                className="w-full px-6 py-3 text-[#0A0A0A] rounded-full font-bold text-center transition-all shadow-gold whitespace-nowrap"
                 style={{ background: 'linear-gradient(135deg, #8B6914 0%, #C9A84C 50%, #E8C068 100%)' }}
               >
                 <span>Jetzt anrufen</span>
@@ -148,7 +150,7 @@ export function Contact() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full px-6 py-3 bg-[#25D366] text-white rounded-lg font-bold text-center hover:bg-[#1ea952] transition-all shadow-lg whitespace-nowrap"
+                className="w-full px-6 py-3 bg-[#25D366] text-white rounded-full font-bold text-center hover:bg-[#1ea952] transition-all shadow-lg whitespace-nowrap"
               >
                 <span>WhatsApp schreiben</span>
               </motion.a>
@@ -247,7 +249,7 @@ export function Contact() {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full px-6 py-4 text-[#0A0A0A] rounded-lg font-bold text-lg transition-all shadow-gold flex items-center justify-center gap-2"
+                className="w-full px-6 py-4 text-[#0A0A0A] rounded-full font-bold text-lg transition-all shadow-gold flex items-center justify-center gap-2"
                 style={{ background: 'linear-gradient(135deg, #8B6914 0%, #C9A84C 50%, #E8C068 100%)' }}
               >
                 <Send className="w-5 h-5" />

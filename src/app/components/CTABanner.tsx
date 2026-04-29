@@ -72,7 +72,7 @@ export function CTABanner() {
               <motion.div
                 whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(201, 168, 76, 0.4)' }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 text-[#0A0A0A] rounded-lg font-bold text-base sm:text-lg transition-all shadow-gold whitespace-nowrap inline-flex items-center justify-center w-full sm:w-auto"
+                className="px-8 py-4 text-[#0A0A0A] rounded-full font-bold text-base sm:text-lg transition-all shadow-gold whitespace-nowrap inline-flex items-center justify-center w-full sm:w-auto"
                 style={{ background: 'linear-gradient(135deg, #8B6914 0%, #C9A84C 50%, #E8C068 100%)' }}
               >
                 <Phone className="w-5 h-5 mr-2" />
@@ -84,7 +84,7 @@ export function CTABanner() {
               href="tel:+4917670363162"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-transparent border-2 border-[#F5F5F5] text-[#F5F5F5] rounded-lg font-bold text-base sm:text-lg hover:bg-[#F5F5F5] hover:text-[#0A0A0A] transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap w-full sm:w-auto"
+              className="px-8 py-4 bg-transparent border-2 border-[#F5F5F5] text-[#F5F5F5] rounded-full font-bold text-base sm:text-lg hover:bg-[#F5F5F5] hover:text-[#0A0A0A] transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap w-full sm:w-auto"
             >
               <Phone className="w-5 h-5" />
               <span className="hidden sm:inline">+49 (0) 176 70363162</span>

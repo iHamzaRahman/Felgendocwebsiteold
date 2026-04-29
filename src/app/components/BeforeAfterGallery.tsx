@@ -137,12 +137,14 @@ export function BeforeAfterGallery() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.2 }}
-            className="inline-block px-4 py-2 bg-[#C9A84C]/10 border-2 rounded-full mb-4"
-            style={{ borderImage: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068) 1' }}
+            className="inline-block relative p-[2px] rounded-full overflow-hidden mb-4"
+            style={{ background: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068)' }}
           >
-            <span className="text-sm font-semibold tracking-wide uppercase text-gradient-gold">
-              Galerie
-            </span>
+            <div className="px-4 py-2 bg-[#111111] rounded-full">
+              <span className="text-sm font-semibold tracking-wide uppercase text-gradient-gold">
+                Galerie
+              </span>
+            </div>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-[#F5F5F5] mb-4">
@@ -177,10 +179,12 @@ export function BeforeAfterGallery() {
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-block px-8 py-4 bg-transparent border-2 rounded-lg font-bold text-lg transition-all"
-              style={{ borderImage: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068) 1' }}
+              className="relative inline-block p-[2px] rounded-full overflow-hidden"
+              style={{ background: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068)' }}
             >
-              <span className="text-gradient-gold">Weitere Bilder in der Galerie</span>
+              <div className="px-8 py-4 bg-[#0A0A0A] rounded-full font-bold text-lg w-full">
+                <span className="text-gradient-gold">Weitere Bilder in der Galerie</span>
+              </div>
             </motion.div>
           </Link>
         </motion.div>

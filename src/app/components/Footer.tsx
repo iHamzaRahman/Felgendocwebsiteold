@@ -15,7 +15,7 @@ export function Footer() {
   const socialLinks = [
     { icon: <Instagram className="w-5 h-5" />, href: '#', label: 'Instagram' },
     { icon: <Facebook className="w-5 h-5" />, href: '#', label: 'Facebook' },
-    { icon: <MapPin className="w-5 h-5" />, href: 'https://maps.google.com/?q=Rudolf-Winkel-Straße+11,+37081+Göttingen', label: 'Google Maps' }
+    { icon: <MapPin className="w-5 h-5" />, href: 'https://maps.google.com/?q=Rudolf-Winkel-Straße+11,+37079+Göttingen,+Germany', label: 'Google Maps' }
   ];
 
   return (
@@ -88,7 +88,7 @@ export function Footer() {
                   info@felgendoc-goettingen.de
                 </a>
               </li>
-              <li className="pt-2">Rudolf-Winkel-Straße 11<br />37081 Göttingen</li>
+              <li className="pt-2">Rudolf-Winkel-Straße 11<br />37079 Göttingen, Germany</li>
               <li className="pt-2">Mo-Fr: 8:00-18:00 Uhr</li>
             </ul>
           </div>

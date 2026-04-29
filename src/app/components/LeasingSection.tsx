@@ -73,11 +73,14 @@ export function LeasingSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.2 }}
-              className="inline-block px-4 py-2 bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded-full"
+              className="inline-block relative p-[2px] rounded-full overflow-hidden"
+              style={{ background: 'linear-gradient(135deg, #8B6914, #C9A84C, #E8C068)' }}
             >
-              <span className="text-[#C9A84C] text-sm font-semibold tracking-wide uppercase">
-                Leasing-Rückgabe
-              </span>
+              <div className="px-4 py-2 bg-[#0A0A0A] rounded-full">
+                <span className="text-[#C9A84C] text-sm font-semibold tracking-wide uppercase">
+                  Leasing-Rückgabe
+                </span>
+              </div>
             </motion.div>
 
             <motion.h2
@@ -132,7 +135,7 @@ export function LeasingSection() {
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-block px-8 py-4 text-[#0A0A0A] rounded-lg font-bold text-lg transition-all shadow-gold"
+                  className="inline-block px-8 py-4 text-[#0A0A0A] rounded-full font-bold text-lg transition-all shadow-gold"
                   style={{ background: 'linear-gradient(135deg, #8B6914 0%, #C9A84C 50%, #E8C068 100%)' }}
                 >
                   Termin vor Rückgabe sichern

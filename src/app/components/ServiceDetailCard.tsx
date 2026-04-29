@@ -23,8 +23,7 @@ export function ServiceDetailCard({ icon, title, description, delay = 0 }: Servi
       <div className="absolute inset-0 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300"
         style={{ background: 'linear-gradient(135deg, rgba(139, 105, 20, 0.1), rgba(201, 168, 76, 0.2))' }} />
 
-      <div className="relative bg-[#1A1A1A] border-2 rounded-xl p-8 h-full hover:transform hover:-translate-y-2 transition-all duration-300"
-        style={{ borderImage: 'linear-gradient(135deg, rgba(139, 105, 20, 0.2), rgba(201, 168, 76, 0.3)) 1' }}>
+      <div className="relative bg-[#1A1A1A] border-2 border-[#C9A84C]/30 rounded-xl p-8 h-full hover:border-[#C9A84C]/50 hover:transform hover:-translate-y-2 transition-all duration-300">
 
         {/* Icon */}
         <motion.div

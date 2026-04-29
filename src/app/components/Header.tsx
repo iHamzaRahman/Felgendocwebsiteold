@@ -81,7 +81,7 @@ export function Header() {
                 transition={{ delay: 0.3 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-2.5 text-[#0A0A0A] rounded font-semibold text-sm transition-all"
+                className="px-6 py-2.5 text-[#0A0A0A] rounded-full font-semibold text-sm transition-all"
                 style={{ background: 'linear-gradient(135deg, #8B6914 0%, #C9A84C 50%, #E8C068 100%)' }}
               >
                 Jetzt anfragen
@@ -142,7 +142,7 @@ export function Header() {
                 <Link
                   to="/kontakt"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block w-full px-6 py-3 text-[#0A0A0A] rounded font-semibold text-center"
+                  className="block w-full px-6 py-3 text-[#0A0A0A] rounded-full font-semibold text-center"
                   style={{ background: 'linear-gradient(135deg, #8B6914 0%, #C9A84C 50%, #E8C068 100%)' }}
                 >
                   Jetzt anfragen
@@ -151,7 +151,7 @@ export function Header() {
                   href="https://wa.me/4917670363162"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full px-6 py-3 bg-[#25D366] text-white rounded font-semibold text-center"
+                  className="block w-full px-6 py-3 bg-[#25D366] text-white rounded-full font-semibold text-center"
                 >
                   WhatsApp
                 </a>
